@@ -1,0 +1,32 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+.container {
+	margin: 10px;
+}
+
+body::before {
+	content: '';
+	background-image: url('https://github.githubassets.com/images/modules/site/patterns/contribution-graph.svg');
+	background-size: cover;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	opacity: 0.7;
+}
+
+.center {
+	text-align: center;
+}
+
+header {
+	display: grid;
+	grid-template-columns: auto auto;
+}
+header > div {
+	margin: auto 0;
+}
