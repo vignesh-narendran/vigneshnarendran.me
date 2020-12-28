@@ -36,7 +36,6 @@ header > div {
 .no-link {
 	text-decoration: none;
 	cursor: pointer !important;
-	box-shadow: 3px 5px 4px #dddddd;
 }
 
 .only-desktop {
