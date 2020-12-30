@@ -9,14 +9,27 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&display=swap"
 			rel="stylesheet"
-        />
-        <link rel="icon" type="image/png" href="media/favicon.ico"/>
+		/>
+
+		<!-- fontawesome cdn -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+		/>
+		<link rel="icon" type="image/png" href="media/favicon.ico" />
 		<link rel="stylesheet" href="style.css" />
+		<!-- jquery cdn -->
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.min.js"
+			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			crossorigin="anonymous"
+		></script>
+
 		<script src="index.js"></script>
 	</head>
 	<body>
 		<div class="container">
-			<header>
+			<!-- <header>
 				<div>
 					<a class="no-link" href="/">
 						<h1 class="only-desktop">VIGNESH NARENDRAN</h1>
@@ -24,15 +37,61 @@
 					</a>
 				</div>
 				<div style="text-align: right">
-					<a class="no-link" href="#contact-me">
+					 <a class="no-link" href="#contact-me">
 						<img
 							class="contact-me-icon"
 							src="media/indian-tea-glass.svg"
 							alt="contact-me"
 						/>
+					</a> 
+				</div>
+			</header> -->
+			<section
+				style="
+					display: grid;
+					vertical-align: middle;
+					grid-template-columns: 50% 50%;
+				"
+			>
+				<div>
+					<h1 style="font-size: 100px; margin: auto 0">
+						Hi, I'm
+						<span
+							style="
+								background: -webkit-linear-gradient(
+									rgb(255, 0, 0),
+									rgb(255, 0, 98)
+								);
+								-webkit-background-clip: text;
+								-webkit-text-fill-color: transparent;
+							"
+							>Vignesh</span
+						>
+						Narendran
+					</h1>
+				</div>
+			</section>
+			<section class="menu" style="display: none">
+				<div class="menu-option">
+					<a class="no-link" href="/"> <i class="fas fa-home"></i>Home </a>
+				</div>
+				<div class="menu-option">
+					<a class="no-link" href="#work">
+						<i class="fas fa-briefcase"></i>
+						<span>Work</span>
 					</a>
 				</div>
-			</header>
+				<div class="menu-option">
+					<a class="no-link" href="#play">
+						<i class="fas fa-gamepad"></i>Play
+					</a>
+				</div>
+				<div class="menu-option">
+					<a class="no-link" href="#chat">
+						<i class="fas fa-comment-alt"></i>Chat
+					</a>
+				</div>
+			</section>
 		</div>
 	</body>
 </html>

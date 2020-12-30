@@ -2,7 +2,7 @@
 	margin: 0;
 	padding: 0;
 	font-family: 'Montserrat', sans-serif;
-	color: #222222;
+	color: #ffffff;
 }
 .container {
 	margin: 10px;
@@ -10,8 +10,10 @@
 
 body::before {
 	content: '';
-	background-image: url('https://github.githubassets.com/images/modules/site/patterns/contribution-graph.svg');
+	background-image: url('/media/image-bg.jpg');
 	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: right;
 	position: absolute;
 	top: 0px;
 	right: 0px;
@@ -36,6 +38,7 @@ header > div {
 .no-link {
 	text-decoration: none;
 	cursor: pointer !important;
+	color: #222222;
 }
 
 .only-desktop {
@@ -48,6 +51,32 @@ header > div {
 	width: 40px;
 	transform: rotate(-40deg);
 	animation: float 7s infinite ease-in-out;
+}
+
+.menu {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	text-align: center;
+	margin: 20px;
+	background: #ffffff;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px #e3e3e3, -5px -5px 10px #ffffff;
+}
+.menu-option i {
+	padding: 0px 5px;
+}
+.menu-option {
+	padding: 20px;
+	margin: 10px;
+	border-radius: 10px;
+}
+
+.menu-option:hover {
+	background: #eeeeee;
+}
+.menu .active {
+	background: #222222;
+	color: #ffffff !important;
 }
 
 @keyframes float {
@@ -71,5 +100,13 @@ header > div {
 	}
 	.contact-me-icon {
 		width: 30px;
+	}
+	.menu {
+		grid-template-columns: auto auto;
+		text-align: left;
+		margin: 30px 0px;
+	}
+	.menu-option {
+		padding: 10px;
 	}
 }
