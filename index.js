@@ -1,9 +1,31 @@
 $(document).ready(() => {
-	$('.menu-option').click((e) => {
-		$('.menu-option').removeClass('active');
-		e.target.tagName == 'DIV'
-			? e.target.classList.add('active')
-			: e.target.parentElement.classList.add('active');
-		console.log(e.target.tagName == 'DIV' ? e.target : e.target.parentElement);
+	let slideOneWidth = 100;
+	let isScroll = true;
+	// add listener to disable scroll
+	$(window).on('scroll mousewheel', (event) => {
+		noScroll();
+		if (event.originalEvent.wheelDelta >= 0) {
+			if ($('#slide-1').width() >= window.innerWidth - 200) {
+				isScroll = true;
+				var w = $(window).width();
+				$('#slide-1').css('width', w);
+			} else {
+				isScroll = true;
+				$('#slide-1').css('width', `${(slideOneWidth += 10)}%`);
+			}
+		} else {
+			if ($('#slide-1').width() < 200) {
+				$('#slide-1').css('width', '5px');
+				setTimeout(() => {
+					isScroll = false;
+				}, 1000);
+			} else {
+				isScroll = true;
+				$('#slide-1').css('width', `${(slideOneWidth -= 10)}%`);
+			}
+		}
 	});
+	function noScroll() {
+		isScroll && window.scrollTo(0, 0);
+	}
 });
