@@ -2,7 +2,7 @@ $(document).ready(() => {
 	let slideOneWidth = 100;
 	let isScroll = true;
 	// add listener to disable scroll
-	$(window).on('scroll mousewheel', (event) => {
+	$('body').on('scroll mousewheel touchmove', (event) => {
 		noScroll();
 		if (event.originalEvent.wheelDelta >= 0) {
 			if ($('#slide-1').width() >= window.innerWidth - 200) {
