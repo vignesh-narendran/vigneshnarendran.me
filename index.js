@@ -1,31 +1,27 @@
 $(document).ready(() => {
-	let slideOneWidth = 100;
-	let isScroll = true;
-	// add listener to disable scroll
-	$('body').on('scroll mousewheel touchmove', (event) => {
-		noScroll();
-		if (event.originalEvent.wheelDelta >= 0) {
-			if ($('#slide-1').width() >= window.innerWidth - 200) {
-				isScroll = true;
-				var w = $(window).width();
-				$('#slide-1').css('width', w);
-			} else {
-				isScroll = true;
-				$('#slide-1').css('width', `${(slideOneWidth += 10)}%`);
-			}
-		} else {
-			if ($('#slide-1').width() < 200) {
-				$('#slide-1').css('width', '5px');
-				setTimeout(() => {
-					isScroll = false;
-				}, 1000);
-			} else {
-				isScroll = true;
-				$('#slide-1').css('width', `${(slideOneWidth -= 10)}%`);
-			}
-		}
+	gsap.registerPlugin(ScrollTrigger);
+	gsap.to('#slide-1', {
+		scrollTrigger: {
+			trigger: '#slide-1',
+			scrub: 2,
+			pin: true,
+			start: 'top top',
+			end: 'bottom top',
+			markers: { startColor: 'green', endColor: 'red', fontSize: '12px' },
+		},
+		width: 0,
+		ease: 'none',
 	});
-	function noScroll() {
-		isScroll && window.scrollTo(0, 0);
-	}
+	gsap.to('#slide-2', {
+		scrollTrigger: {
+			trigger: '#slide-2',
+			scrub: 1,
+			pin: true,
+			start: 'top top',
+			end: 'bottom top',
+			markers: { startColor: 'pink', endColor: 'black', fontSize: '12px' },
+		},
+		top: '0',
+		ease: 'none',
+	});
 });
