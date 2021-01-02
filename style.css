@@ -51,7 +51,7 @@ body {
 	overflow: hidden;
 	width: 100%;
 	white-space: nowrap;
-	opacity: 0;
+	opacity: 1;
 }
 
 #slide-2 > div {
@@ -86,7 +86,7 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-	.slide {
+	#slide-1 {
 		grid-template-columns: none;
 		grid-template-rows: 40% auto;
 	}
