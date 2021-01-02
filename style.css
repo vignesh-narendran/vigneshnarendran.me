@@ -3,6 +3,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Montserrat', sans-serif;
+	--ACCENT-COLOR: linear-gradient(rgba(233, 24, 24, 0.945), rgb(248, 0, 116));
 }
 body::-webkit-scrollbar {
 	display: none;
@@ -30,7 +31,7 @@ body {
 }
 
 .headline span {
-	background: linear-gradient(rgba(233, 24, 24, 0.945), rgb(248, 0, 116));
+	background: var(--ACCENT-COLOR);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -51,16 +52,18 @@ body {
 	background-size: cover;
 	overflow: hidden;
 	width: 100%;
-	/* white-space: nowrap; */
-	opacity: 1;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: -30;
 }
 
 #slide-2 > div {
-	margin: 30px;
+	margin: 20px;
 }
 
 #slide-2 h6 {
-	background: linear-gradient(rgba(233, 24, 24, 0.945), rgb(248, 0, 116));
+	background: var(--ACCENT-COLOR);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	font-style: italic;
@@ -71,13 +74,95 @@ body {
 }
 
 #slide-2 a {
-	background: linear-gradient(rgba(233, 24, 24, 0.945), rgb(248, 0, 116));
+	background: var(--ACCENT-COLOR);
 	padding: 5px;
 	border-radius: 5px;
 	text-decoration: none;
 	color: #ffffff;
 	font-style: italic;
 	font-size: 10px;
+}
+
+#slide-3 {
+	min-height: 100vh;
+	max-height: auto;
+	position: absolute;
+	top: 200%;
+	background-color: #ffaa40;
+	background-color: #0e0e0e;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='123' height='123' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%230c0c0c' %3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='1'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
+	width: 100%;
+}
+
+#slide-3 > h2 {
+	color: #ffffff;
+	font-style: italic;
+	font-weight: bold;
+	margin: 20px 30px 0px 30px;
+}
+
+.cards-container {
+	display: flex;
+	flex-wrap: nowrap;
+	margin: 5px 30px;
+	scrollbar-width: thin;
+	overflow-x: auto;
+}
+.cards-container::-webkit-scrollbar-track {
+	/* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='123' height='123' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%230c0c0c' %3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='1'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.cards-container::-webkit-scrollbar {
+	max-width: 3px;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='123' height='123' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%230c0c0c' %3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='1'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.cards-container::-webkit-scrollbar-thumb {
+	background-color: #d3d3d3;
+}
+
+.card {
+	border-radius: 20px;
+	background: linear-gradient(145deg, #f3f3f3, #dadada);
+	box-shadow: 25px 25px 69px #0f0f0f, -25px -25px 69px #050505;
+	margin: 10px 20px;
+	padding: 10px;
+	min-height: 250px;
+	min-width: 200px;
+	max-width: 200px;
+	display: grid;
+	grid-template-rows: 20% 60% 20%;
+	opacity: 0;
+}
+
+.card h3 {
+	font-style: italic;
+	font-size: 20px;
+}
+
+.card a {
+	background: var(--ACCENT-COLOR);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-style: italic;
+	text-decoration: none;
+	font-size: 10px;
+}
+
+.card p {
+	font-size: 15px;
+}
+
+#slide-2 > h1,
+#slide-3 > h1 {
+	font-size: 20px;
+	background: var(--ACCENT-COLOR);
+	padding: 10px;
+	color: #ffffff;
+	transform: skewX(-10deg);
+	display: inline-block;
+	margin: 20px;
 }
 
 .my-image {
