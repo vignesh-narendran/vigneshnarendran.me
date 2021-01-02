@@ -37,26 +37,47 @@ $(document).ready(() => {
 		{
 			'digital-art-card': [
 				{
-					name: 'Wallpapers!',
+					name: 'Wallpapers',
 					image:
 						'https://res.cloudinary.com/colormydevice/image/upload/v1592455339/Pika-Pika_2020-06-18T04:42:19.898Z.jpg',
 					link: 'https://colormydevice.in/',
 				},
-				{},
-				{},
-				{},
+				{
+					name: 'Logo',
+					image:
+						'https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/86d32285118613.5d71ebdf5364b.jpeg',
+					link: 'https://www.behance.net/gallery/85118613/Logo-Designs',
+				},
+				{
+					name: 'Vector Art',
+					image:
+						'https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/4190aa85117887.5d71e4996f2c6.jpg',
+					link: 'https://www.behance.net/gallery/85117887/Digital-Art',
+				},
 			],
 		},
 		{
 			'youtube-card': [
 				{
 					name: 'Tech',
-					video: 'https://www.youtube.com/watch?v=aAZH3Vf8Loc&t=541s',
-					link: 'https://colormydevice.in/',
+					video: 'https://www.youtube.com/embed/aAZH3Vf8Loc',
+					link: 'https://youtube.com/elementon',
 				},
-				{},
-				{},
-				{},
+				{
+					name: 'Travel',
+					video: 'https://www.youtube.com/embed/IeIFQ0MKLa8',
+					link: 'https://youtube.com/elementon',
+				},
+				{
+					name: 'Food',
+					video: 'https://www.youtube.com/embed/vSEZL620VEE',
+					link: 'https://youtube.com/elementon',
+				},
+				{
+					name: 'Explanation',
+					video: 'https://www.youtube.com/embed/RgGu1hPexKA',
+					link: 'https://youtube.com/elementon',
+				},
 			],
 		},
 	];
@@ -75,7 +96,7 @@ $(document).ready(() => {
 						structuredData = `<div class='card'><div><h3>${data.name}</h3></div><div style="background: url('${data.image}');background-size: cover;background-position:center"></div><div><a target="_blank" href="${data.link}">Click to view &#8594;</a></div></div>`;
 						break;
 					case 'youtube-card':
-						structuredData = `<div class='card'><div><h3>${data.name}</h3></div><div style="width: 100%"><iframe style="width: 100%" src="${data.video}" title="YouTube"></div></div>`;
+						structuredData = `<div class='card'><div><h3>${data.name}</h3></div><div style="width: 100%"><iframe width="100%" src="${data.video}" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><a target="_blank" href="${data.link}">Click to watch all videos &#8594;</a></div></div>`;
 						break;
 				}
 				console.log(structuredData);
