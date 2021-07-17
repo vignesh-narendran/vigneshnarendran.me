@@ -172,7 +172,7 @@ body {
 
 .social-media {
 	display: grid;
-	grid-template-columns: auto auto auto auto;
+	grid-template-columns: auto auto auto auto auto;
 	color: black;
 	font-size: 50px;
 	text-align: center;
