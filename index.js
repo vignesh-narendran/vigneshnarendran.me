@@ -6,7 +6,7 @@ $(document).ready(() => {
 					name: 'Color My Device',
 					description:
 						'Color My Device is node based web application built using the MERN stack. The application is hosted in AWS.',
-					link: 'https://colormydevice.in',
+					link: 'https://ec2-3-86-104-69.compute-1.amazonaws.com/',
 				},
 				{
 					name: 'Calcufast',
@@ -37,10 +37,10 @@ $(document).ready(() => {
 		{
 			'digital-art-card': [
 				{
-					name: 'Wallpapers',
+					name: 'Seasonal Stack',
 					image:
-						'https://res.cloudinary.com/colormydevice/image/upload/v1592455339/Pika-Pika_2020-06-18T04:42:19.898Z.jpg',
-					link: 'https://colormydevice.in/',
+						'https://cdn.shopify.com/s/files/1/0559/5175/3385/products/man-with-the-paln-tshirt-men_17_1024x1024@2x.jpg?v=1623040718',
+					link: 'https://seasonalstack.com/',
 				},
 				{
 					name: 'Logo',
@@ -60,7 +60,7 @@ $(document).ready(() => {
 			'youtube-card': [
 				{
 					name: 'Tech',
-					video: 'https://www.youtube.com/embed/aAZH3Vf8Loc',
+					video: 'https://www.youtube.com/embed/AUE-TwyHoNc',
 					link: 'https://youtube.com/elementon',
 				},
 				{
