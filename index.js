@@ -3,12 +3,6 @@ $(document).ready(() => {
 		{
 			'coding-card': [
 				{
-					name: 'Color My Device',
-					description:
-						'Color My Device is node based web application built using the MERN stack. The application is hosted in AWS.',
-					link: 'https://ec2-3-86-104-69.compute-1.amazonaws.com/',
-				},
-				{
 					name: 'Calcufast',
 					description:
 						"Love speed math? Calcufast is the web app you should try. A simple vanilla JavaScript application that's addicitve.",
@@ -36,12 +30,6 @@ $(document).ready(() => {
 		},
 		{
 			'digital-art-card': [
-				{
-					name: 'Seasonal Stack',
-					image:
-						'https://cdn.shopify.com/s/files/1/0559/5175/3385/products/man-with-the-paln-tshirt-men_17_1024x1024@2x.jpg?v=1623040718',
-					link: 'https://seasonalstack.com/',
-				},
 				{
 					name: 'Logo',
 					image:
